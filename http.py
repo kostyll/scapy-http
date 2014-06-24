@@ -214,4 +214,4 @@ class HTTP(Packet):
             pass
         return Packet.guess_payload_class(self, payload)
 
-bind_layers(TCP, HTTP)
+bind_layers(TCP, HTTP, dport=80)
